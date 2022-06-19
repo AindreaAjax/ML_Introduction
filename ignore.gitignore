@@ -1,0 +1,6 @@
+# common folders to ignore (folders generated when using jupyterlab & python)
+
+**/.ipynb_checkpoints/
+**/.virtual_documents/
+**/__pycache__/
+**/Ref-**/

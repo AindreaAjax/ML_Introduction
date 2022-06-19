@@ -1,0 +1,33 @@
+## [HEADER] <Commit Type> <files affected by the change>: <short summary>
+
+# The <type> and <summary> fields are mandatory, the (<scope>) field is optional.
+
+# Types may include --
+#    docs: Documentation only changes
+#    chore: Regular code maintenance
+#    sec: A new section of code (use sec instead of feat in tutorial like code files)
+#    feat: A new feature
+#    fix: A bug fix
+#    perf: A code change that improves performance
+#    refactor: A code change that neither fixes a bug nor adds a feature
+#    test: Adding missing tests or correcting existing tests
+
+# Summary in present tense. Capitalized. No period at the end.
+
+## Commit Message Body
+
+# Just as in the summary, use the imperative, present tense: "fix" not "fixed" nor "fixes".
+# Explain the motivation for the change in the commit message body. This commit message should explain why you are making the change. 
+# You can include a comparison of the previous behavior with the new behavior in order to illustrate the impact of the change.
+# Do not assume the reviewer understands what the original problem was, ensure you add it.
+# Do not think your code is self-explanatory.
+
+## Commit Message Footer
+
+# The footer is the place to reference GitHub issues, Jira tickets, and other PRs that this commit closes or is related to.
+
+## If the commit reverts a previous commit, it should begin with <revert: followed by the header of the reverted commit>
+
+# The content of the commit message body should contain:--
+#    information about the SHA of the commit being reverted in the following format: This reverts commit <SHA>,
+#    a clear description of the reason for reverting the commit message.
