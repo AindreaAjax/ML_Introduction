@@ -8,11 +8,13 @@
         > docs: Documentation only changes  
         > chore: Regular code maintenance
         > sec: A new section of code (use sec instead of feat in tutorial-like code files) 
+	> subsec: A subsection inside an existing section of the code
         > ref: A new tutorial/reference file is initiated
         > feat: A new feature
 	> fix: A bug fix
         > perf: A code change that improves performance
         > refactor: A code change that neither fixes a bug nor adds a feature
+	> rename: Renaming a file/folder
         > test: Adding missing tests or correcting existing tests
     - Summary in the present tense. Capitalized. No period in the end.
 
