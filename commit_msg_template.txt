@@ -7,11 +7,12 @@
     - Types may include --  
         > docs: Documentation only changes  
         > chore: Regular code maintenance
-        > sec: A new section of code (use sec instead of feat in tutorial-like code files) 
-		> subsec: A subsection inside an existing section of the code
-        > project: A new project is initiated and Some files relating to a that project was created
+        > project: A new project is initiated and Some files relating to that project was created
+        > crt: A new file is created (If the file is intented to be used as a tutorial or reference then use ref instead).
         > ref: A new tutorial/reference file is initiated
-        > feat: A new feature
+        > feat: A new feature (use sec instead of feat in tutorial-like code files).
+        > sec: A new section of code 
+		> subsec: A subsection inside an existing section of the code
 		> fix: A bug fix
         > perf: A code change that improves performance
         > refactor: A code change that neither fixes a bug nor adds a feature
