@@ -1,36 +1,6 @@
-# ML_Introduction
+# ML_Introduction (To Learn)
 
--------------------------------------------
-## Python Basics
-
-Sources:
-  - Previous notebooks
-  - CS50 Python playlist
-  
-Future prospects:
-  - RegEx
-  - Building some more basic projects
-  - Generators
-  - Decorators
-  - OOP in depth
-  
--------------------------------------------
-## Numpy
-
-Future prospects:
-  - Statistics for DS and ML (Theory + NumPy implementation)
-    - see, https://www.youtube.com/playlist?list=PLqrmzsjOpq5i5YITE2EylhDpBvFcphSbS for learning statistics theory
-  - Linear algebra for DS and ML (Theory + NumPy implementation)
-    - see, https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab for learning linear algebra theory
-    
--------------------------------------------
-## Pandas
-
-Sources:
-  - Follow the sequence of kaggle Pandas course (https://www.kaggle.com/learn/pandas)
-  - Previous notebooks
-  - [Book] Effective pandas by, Matt Harrison (follow along other works when possible once you've learned the basics of Pandas) 
--------------------------------------------
+-----------------------------------------------
 ## SQL
 
 Sources:
