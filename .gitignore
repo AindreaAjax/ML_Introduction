@@ -8,3 +8,5 @@
 **/*.code**
 **/.idea/
 **/.xdp**
+**/datasets-**
+**PDFs/**
