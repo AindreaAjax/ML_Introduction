@@ -38,7 +38,7 @@
 ### Best Practices
 
 1. use “git init” in a project folder that you know for sure has the correct name otherwise rename the folder before initializing a git project
-2. and reformat your code every time you save the code. use a consistent format style.
+2. reformat your code every time you save the code. use a consistent format style.
 3. commit only when you are sure that the changes you have made are of significant nature. otherwise, there's no need to clog up the commit history with "fixed a typo" like commit messages.
 4. follow a definite commit message convention. Tip: you can use git hooks to remind you of the convention.
 5. remember to regularly push your code to the cloud once you feel that the changes are significant.
