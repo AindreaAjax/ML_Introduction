@@ -6,6 +6,7 @@
 - Pandas official documentation
 - [Book] Effective Pandas by, Matt Harrison (Some chapters were skipped)
 Primarily I've depended on these two resources. Most of the datasets used in learning pandas were also collected from Matt's GitHub repo named datasets. Some screenshots of the tables summarizing the available methods and properties of some functions were used inside the notebooks (to be specific 2 screenshots till now).
+- [Course] Data Scientist Professional Career Track by DataCamp.
 
 ## Future prospect:
 - [Book] Data Cleaning Examples throughout different chapters of the book (Effective Pandas by, Matt Harrison).
@@ -14,5 +15,3 @@ Primarily I've depended on these two resources. Most of the datasets used in lea
     - JetBrains developer dataset etc.
 
 - ./02_Reading_and_writing_data.ipynb: Learn how to interact with various file types such as CSV, JSON, SQL, Excel, Feather, Parquet, etc.
-
-- ./05_Plotting.ipynb: Plotting different kinds of plots with Pandas.
