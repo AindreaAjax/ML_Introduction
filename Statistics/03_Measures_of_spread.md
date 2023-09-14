@@ -66,7 +66,7 @@ where, $\bar{x}$ is the sample mean and $n$ is the number of data points.
     **`Note:`** We actually use the absolute deviation to form another measure of spread called the **Mean Absolute Deviation (MAD)**.
     $$ MAD = \frac{\sum_{i=1}^{N} |x_i - \mu|}{N}$$
 
-    Since we squared all the deviations, the variance penalizes the larger deviations more severly whereas, MAD treats all deviations equally. Thus, variance is more sensitive to outliers than MAD.
+    Since we squared all the deviations, the variance penalizes the larger deviations more severly whereas, MAD treats all deviations equally. Thus, variance is more sensitive to outliers than MAD. Also, the variance is in squared units of the original data whereas MAD is in the same units as the original data. Thus, MAD is more interpretable than variance. Even then Standard Deviation is more commonly used than MAD.
 
 2. Why do we divide the sum of squared deviations by $N-1$ in the population variance formula and by $n-1$ in the sample variance formula? This is done to correct for the bias in the estimation of the population variance from the sample variance. The sample variance is a biased estimator of the population variance because it tends to underestimate the population variance (since we can't exactly know the population mean thus we use sample mean to calculate the sample variance). Dividing by $n-1$ instead of $n$ corrects for this bias. This is known as Bessel's correction.
 

@@ -78,6 +78,4 @@ Being able to identify data types is important since the type of data you're wor
 
 
 # Resources 
-- Data Scientist Professional Career track by DataCamp (Course 6: Introduction to Statistics with Pythong)
 - Introduction to Statistics by Simple Learning Pro [(Youtube link)](https://www.youtube.com/watch?v=MXaJ7sa7q-8&list=PL0KQuRyPJoe6KjlUM6iNYgt8d0DwI-IGR&index=1).
-

@@ -2,7 +2,7 @@
 - [The mean](#the-mean)
     - [Weighted mean](#weighted-mean)
     - [When to use?](#when-to-use)
-    - [Note: Here we've only discussed the arithmatic mean. There are also geometric and harmonic means. Get an introduction to geometric and harmonic means from this YouTube video.](#note-here-weve-only-discussed-the-arithmatic-mean-there-are-also-geometric-and-harmonic-means-get-an-introduction-to-geometric-and-harmonic-means-from-this-youtube-video)
+    - [Note: Here we've only discussed the arithmatic mean. There are also geometric and harmonic means. Get an introduction to geometric and harmonic means from this YouTube video by zedstatistics.](#note-here-weve-only-discussed-the-arithmatic-mean-there-are-also-geometric-and-harmonic-means-get-an-introduction-to-geometric-and-harmonic-means-from-this-youtube-video-by-zedstatistics)
 - [The median](#the-median)
     - [When to use?](#when-to-use-1)
 - [The mode](#the-mode)
@@ -32,7 +32,7 @@ Where, `f` is the frequency of each value.
 ### When to use?
 - It is a good measure of central tendency when the data is numeric, not skewed (such as uniform, normal or bimodal distribution) and does not have extreme outliers.
 
-### Note: Here we've only discussed the arithmatic mean. There are also geometric and harmonic means. Get an introduction to geometric and harmonic means from [this YouTube video](https://www.youtube.com/watch?v=jXKYI7wyqp0&list=PLTNMv857s9WVStKLco6ZBOsfSGXzJ1L0f&index=2).
+### Note: Here we've only discussed the arithmatic mean. There are also geometric and harmonic means. Get an introduction to geometric and harmonic means from [this YouTube video](https://www.youtube.com/watch?v=jXKYI7wyqp0&list=PLTNMv857s9WVStKLco6ZBOsfSGXzJ1L0f&index=2) by zedstatistics.
 
 # The median
 
