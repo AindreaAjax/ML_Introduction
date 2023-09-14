@@ -47,7 +47,10 @@ The IQR is a robust measure of spread that is less affected by outliers. It is c
 
 $$ IQR = Q3 - Q1 $$
 
-Box and whisker plots are a popular visualization technique to represent the IQR and other measures of spread. The box represents the IQR, and the whiskers extend to the minimum and maximum values in the data set. Outliers are plotted as individual points.
+Box and whisker plots are a popular visualization technique that uses IQR to represent the spread of the data. The box represents the IQR, and the whiskers extend to the minimum and maximum values in the data set. Outliers are plotted as individual points.
+
+**Outliers** are data points that are significantly different from the other data vlaues. But how do we know which one is an outlier? A rule that's often used is that, $data\ points < Q1 - (1.5 * IQR)$ and the $data\ points > Q3 + (1.5 * IQR)$ are considered outliers.
+
 
 # Variance
 
@@ -68,7 +71,7 @@ where, $\bar{x}$ is the sample mean and $n$ is the number of data points.
 
     Since we squared all the deviations, the variance penalizes the larger deviations more severly whereas, MAD treats all deviations equally. Thus, variance is more sensitive to outliers than MAD. Also, the variance is in squared units of the original data whereas MAD is in the same units as the original data. Thus, MAD is more interpretable than variance. Even then Standard Deviation is more commonly used than MAD.
 
-2. Why do we divide the sum of squared deviations by $N-1$ in the population variance formula and by $n-1$ in the sample variance formula? This is done to correct for the bias in the estimation of the population variance from the sample variance. The sample variance is a biased estimator of the population variance because it tends to underestimate the population variance (since we can't exactly know the population mean thus we use sample mean to calculate the sample variance). Dividing by $n-1$ instead of $n$ corrects for this bias. This is known as Bessel's correction.
+2. Why do we divide the sum of squared deviations by $N$ in the population variance formula and by $n-1$ in the sample variance formula? This is done to correct for the bias in the estimation of the population variance from the sample variance. The sample variance is a biased estimator of the population variance because it tends to underestimate the population variance (since we can't exactly know the population mean thus we use sample mean to calculate the sample variance). Dividing by $n-1$ instead of $n$ corrects for this bias. This is known as Bessel's correction.
 
 
 # Standard Deviation
@@ -84,7 +87,7 @@ $$ Sample\ Standard\ Deviation,\ s = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2
 
 The coefficient of variation is the ratio of the standard deviation to the mean, expressed as a percentage. 
 
-So why do we need it? The standard deviation is a measure of absolute variability. It doesn't take the scale of the data into account. But it is often useful to compare variability between two data sets that have different means. The coefficient of variation allows you to compare the spread of two data sets that have different units or scales. A practical example is explained in [this YouTube video](https://www.youtube.com/watch?v=9dwLKGoaeEs&list=PLTNMv857s9WVStKLco6ZBOsfSGXzJ1L0f&index=8). 
+So why do we need it? The standard deviation is a measure of absolute variability. It doesn't take the scale of the data into account. But it is often useful to compare variability between two data sets that have different means. The coefficient of variation allows you to compare the spread of two data sets that have different units or scales. A practical example of when CV is useful is explained in [this YouTube video](https://www.youtube.com/watch?v=9dwLKGoaeEs&list=PLTNMv857s9WVStKLco6ZBOsfSGXzJ1L0f&index=8). 
 
 
 $$ CV = \frac{s}{\bar{x}} \times 100 \% $$
