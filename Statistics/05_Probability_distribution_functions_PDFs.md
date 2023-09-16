@@ -7,11 +7,12 @@
   - [Cumulative distribution function (CDF) for discrete random variables](#cumulative-distribution-function-cdf-for-discrete-random-variables)
 - [Probability density function (PDF)](#probability-density-function-pdf)
   - [Cumilitive distribution function (CDF) for continuous random variables](#cumilitive-distribution-function-cdf-for-continuous-random-variables)
+- [Expected value of a distribution](#expected-value-of-a-distribution)
 - [Common probability distribution functions](#common-probability-distribution-functions)
   - [Discrete distributions](#discrete-distributions)
     - [Binomial distribution](#binomial-distribution)
     - [Poisson distribution](#poisson-distribution)
-    - [Geometric distribution](#geometric-distribution)
+    - [Hypergeometric distribution](#hypergeometric-distribution)
   - [Continuous Distributions](#continuous-distributions)
     - [Normal distribution](#normal-distribution)
     - [Exponential distribution](#exponential-distribution)
@@ -131,6 +132,28 @@ $$F(x) = \int_{-\infty}^{x} f(x) \, dx $$
 2. $F(−∞)=0$ and $F(∞)=1$: The CDF approaches 0 as x approaches negative infinity and approaches 1 as x approaches positive infinity.
 
 
+# Expected value of a distribution
+
+The expected value of a distribution is the average of the values of the distribution, weighted by their probabilities. It is also known as the mean or average of the distribution.
+
+The expected value (or mean) of a probability distribution is often denoted by the symbol $E(X)$ or $μ$ (mu) for a random variable $X$. 
+
+The formula for calculating the expected value of a discrete random variable is:
+
+$$E(X) = \sum_{x} x \cdot P(X = x)$$
+
+And for a continuous random variable, it's calculated as an integral:
+
+$$E(X) = \int_{-\infty}^{\infty} x \cdot f(x) \, dx$$
+
+Where:
+- $E(X)$ is the expected value of the random variable $X$.
+- $x$ represents the possible values of the random variable.
+- $P(X = x)$ is the probability mass function (for discrete) or $f(x)$ is the probability density function (for continuous) at $x$.
+
+
+
+
 # Common probability distribution functions
 
 Let's briefly introduce some common PDFs:
@@ -151,11 +174,11 @@ The binomial distribution is defined by two parameters:
 - n: The number of trials.
 - p: The probability of success on each trial.
 
-The probability of getting x successes in n trials is given by the following formula:
+The probability of getting $x$ successes in $n$ trials is given by the following formula:
 
 $$P(X = x) = \binom{n}{x} \cdot p^x \cdot (1 - p)^{(n - x)}$$
 
-Where, $\binom{n}{x}$ is called the binomial coefficient and is nothing but the number of ways to choose x successes from n trials. You maybe familiar with this as the combination formula $nCx$.
+Where, $\binom{n}{x}$ is called the binomial coefficient and is nothing but the number of ways to choose $x$ successes from $n$ trials. You maybe familiar with this as the combination formula $nCx$.
 
 Here are some examples of how the binomial distribution can be used:
 
@@ -179,7 +202,7 @@ The Poisson distribution is defined by a single parameter:
 
 - λ: The mean rate of occurrence of events i.e, the expected number of events per time interval.
 
-The probability of getting x events in a fixed interval is given by the following formula:
+The probability of getting $x$ number of occurence/events in a fixed interval is given by the following formula:
 
 $$P(X = x) = \frac{\lambda^x e^{-\lambda}}{x!}
 $$
@@ -191,17 +214,40 @@ Here are some examples of how the Poisson distribution can be used:
 - An insurance company can use the Poisson distribution to estimate the number of accidents that will occur in a given month.
 
 `Notes:`
-1. Poission distribution is bounded by 0 (on the left) and infinity (on the right).
+1. Poission distribution is bounded by 0 on the left and infinity on the right.
 2. In a Poisson distribution the expected value, $E(X)$ and the variance, $Var(X)$ are equal i.e, $E(X) = Var(X) = \lambda$.
 3. $\lambda$ doesn't necessarily have to be an integer. It can be any positive real number.
 4. For a fully poisson distribution, the expected value can be scaled along with the time interval. For example, if the expected number of events in 1 day is 48, then the expected number of events in 1 hour is 2.
+5. The Poisson distribution is skewed to the right.
+6. The Poisson distribution approaches a normal distribution as λ increases.
 
 
 `Explained with example:` [Poisson distribution by zedstatistics](https://www.youtube.com/watch?v=cPOChr_kuQs&list=PLTNMv857s9WVzutwxaMb0YZKW7hoveGLS&index=3)
 
 
-### Geometric distribution
-Geometric Distribution models the number of trials needed to achieve the first success in a sequence of Bernoulli trials.
+### Hypergeometric distribution
+It is equivalent to the binomial distribution, except that instead of sampling with replacement, the sampling is done without replacement. As a result, the probability of success changes from trial to trial.
+
+The hypergeometric distribution is a discrete probability distribution that describes the probability of getting a certain number of successes in a fixed number of draws, without replacement, from a finite population.
+
+`Formula:`
+The hypergeometric distribution is defined by three parameters:
+
+- N: The size of the population.
+- K: The number of successes in the population.
+- n: The number of draws.
+
+The probability of getting $x$ successes in $n$ draws is given by the following formula:
+
+$$P(X = x) = \frac{\binom{K}{x} \binom{N-K}{n-x}}{\binom{N}{n}}$$
+
+Here are some examples of how the hypergeometric distribution can be used:
+
+- A quality control engineer can use the hypergeometric distribution to estimate the probability of getting a certain number of defective products in a sample of products.
+- A medical researcher can use the hypergeometric distribution to estimate the probability of getting a certain number of people with a certain disease in a population sample.
+
+`Explained with example:` [Hypergeometric distribution by zedstatistics](https://www.youtube.com/watch?v=upVJ4YqTlC4&list=PLTNMv857s9WVzutwxaMb0YZKW7hoveGLS&index=4)
+
 
 ## Continuous Distributions
 
