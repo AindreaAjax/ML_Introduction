@@ -1,3 +1,12 @@
+- [Probability](#probability)
+  - [Four basic rules of probability](#four-basic-rules-of-probability)
+    - [Complement rule](#complement-rule)
+    - [Rule for equally likely outcomes](#rule-for-equally-likely-outcomes)
+    - [Addition rule for mutually exclusive events](#addition-rule-for-mutually-exclusive-events)
+    - [Multiplication rule for independent events](#multiplication-rule-for-independent-events)
+  - [Conditional probability](#conditional-probability)
+    - [Bayes' rule](#bayes-rule)
+
 # Probability
 
 In simple terms, probability involves predicting the relative likelihood that a particular event will occur, expressed as a number between 0 and 1. The higher the probability of an event, the more likely it is that the event will occur.
@@ -17,7 +26,7 @@ $$P(A) = \frac{m}{n}$$
 
 For example, if you roll a fair die, the probability of getting a 6 is $P(6) = \frac{1}{6}$.
 
-### Addition rule
+### Addition rule for mutually exclusive events
 If events $A$ and $B$ are mutually exclusive, then the probability of either event occurring is, 
 
 $$P(A\ or\ B) = P(A) + P(B)$$
@@ -25,7 +34,7 @@ $$P(A\ or\ B) = P(A) + P(B)$$
 So what does it mean for two events to be mutually exclusive? It means that the two events cannot occur at the same time. For example, if you roll a fair die, the events getting a 6 and getting a 5 on the same roll are mutually exclusive. But, getting a 5 and getting an odd number are not mutually exclusive, because you can get a 5 and an odd number on the same roll.
 
 
-### Multiplication rule
+### Multiplication rule for independent events
 If events $A$ and $B$ are independent, then the probability of both events occurring is, 
 
 $$P(A\ and\ B) = P(A) \times P(B)$$
