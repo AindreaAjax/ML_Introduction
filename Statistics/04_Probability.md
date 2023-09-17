@@ -29,19 +29,27 @@ For example, if you roll a fair die, the probability of getting a 6 is $P(6) = \
 ### Addition rule for mutually exclusive events
 If events $A$ and $B$ are mutually exclusive, then the probability of either event occurring is, 
 
-$$P(A\ or\ B) = P(A) + P(B)$$
+$$P(A\ \cup B) = P(A) + P(B)$$
 
 So what does it mean for two events to be mutually exclusive? It means that the two events cannot occur at the same time. For example, if you roll a fair die, the events getting a 6 and getting a 5 on the same roll are mutually exclusive. But, getting a 5 and getting an odd number are not mutually exclusive, because you can get a 5 and an odd number on the same roll.
 
+For mutually exclusive events, 
+
+$$P(A \cap B) = 0$$ 
 
 ### Multiplication rule for independent events
 If events $A$ and $B$ are independent, then the probability of both events occurring is, 
 
-$$P(A\ and\ B) = P(A) \times P(B)$$
+$$P(A\ \cap B) = P(A) \times P(B)$$
 
 So what does it mean for two events to be independent of each other? Two events are independent if knowing that one occurs doesn't change the probability that the other one occurs. For example, getting a 6 on the second roll is independent of whatever you got on the first roll.
 
+There will always be some intersection between two independent events. And for independent events $A$ and $B$, $$P(A\ |\ B) = P(A)$$
+
 Two events are dependent if knowing that one occurs changes the probability that the other one occurs. For example, getting a 6 on the first roll completely eliminates the possibility of getting a 3 on that roll.
+
+Mutually exclusive events are the most extreme example of dependent events.
+
 
 ## Conditional probability
 
