@@ -2,6 +2,7 @@
   - [Covariance](#covariance)
   - [Correlation](#correlation)
   - [Miscellaneous](#miscellaneous)
+  - [Correlation doesn't mean causation.](#correlation-doesnt-mean-causation)
 
 # Covariance and correlation
 
@@ -77,7 +78,7 @@ The value of $\rho_{xy} = 0.64$ is quite high and this tells us that the two var
 
 `Notes:`
 - Covariance and correlation are only defined for numerical variables.
-- Covariance and correlation are only defined for linear relationships.
+- **Covariance and correlation are only defined for linear relationships.**
 - Correlation is always between -1 and 1.
 
 ## Miscellaneous
@@ -92,3 +93,9 @@ $$\rho_{xy} = \frac{cov(X,Y)}{\sigma_x \sigma_y}$$
 
 $$ \sigma_x = \sqrt{\sum_{i=1}^{n} (x_i - E_x)^2 \times P(x_i)}$$
 $$ \sigma_y = \sqrt{\sum_{i=1}^{n} (y_i - E_y)^2 \times P(y_i)}$$
+
+
+## Correlation doesn't mean causation.
+Correlation is a measure of the strength of the relationship between two variables. It does not imply causation. For example, there is a strong correlation between ice cream sales and sunglasses sales. But, that doesn't mean that sunglasses sales causes ice cream sales or vice versa. The reason behind this correlation is that both of these variables are related to the weather. When the weather is hot, both ice cream sales and sunglasses sales go up. So, the weather is the actual cause of this correlation.
+
+Such correlations are called spurious correlations and the hidden causes of these correlations are called lurking or confounding variables.
