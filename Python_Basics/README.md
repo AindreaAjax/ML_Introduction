@@ -10,6 +10,3 @@
 ## Future prospects:
 - RegEx
 - Building some more basic projects
-- Generators
-- Decorators
-- OOP in depth
