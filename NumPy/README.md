@@ -1,12 +1,11 @@
 ----------------------------
-# NumPy
+# NumPy (Resources)
 -------------------------
-
-## Resources:
 - NumPy documentation
 - NumPy Fundamentals by, Pablo Caceres (https://github.com/pabloinsente/intro-sc-python/blob/master/notebooks/intro-numpy-fundamentals.ipynb)
+- [Practice] 100 numpy exercises (https://github.com/rougier/numpy-100)
 
-## Future prospects:
+## Future prospect
 - Numpy Sorting, Searching and Counting (https://numpy.org/doc/stable/reference/routines.sort.html)
 - Numpy Linear Algebra (https://numpy.org/doc/stable/reference/routines.linalg.html)
 - Numpy Random Sampling (https://numpy.org/doc/stable/reference/random/index.html)
