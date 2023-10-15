@@ -14,3 +14,7 @@
 6. EDA
    - Intro
    - Data communication concepts
+   - Data cleaning (***)
+7. SQL
+   - Interacting with relational databases in Python
+8. Regression Analysis Intro with statsmodels
