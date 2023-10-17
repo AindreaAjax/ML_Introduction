@@ -23,7 +23,7 @@ A more important question, however, is what can statistics do? With the power of
 - How many occupants will your hotel have? How can you optimize occupancy? 
 - How many sizes of jeans need to be manufactured so they can fit 95% of the population? 
 - Should the same number of each size be produced? 
-- A question like, Which ad is more effective in getting people to purchase a product? can be answered with A/B testing. 
+- A question like, which ad is more effective in getting people to purchase a product? for instance can be answered with A/B testing. 
 
 
 While statistics can answer a lot of questions, it's important to note that statistics can't answer every question. If we want to know why the TV series Game of Thrones is so popular, we could ask everyone why they like it, but they may lie or leave out reasons. We can see if series with more violent scenes attract more viewers, but even if they do, we can't know if the violence in Game of Thrones is the reason for its popularity, or if other factors are driving its popularity and it just happens to be violent. 

@@ -2,6 +2,7 @@
 - [Range](#range)
 - [Quantiles](#quantiles)
 - [Interquartile Range (IQR)](#interquartile-range-iqr)
+    - [Outliers](#outliers)
 - [Variance](#variance)
     - [Answer to 2 common questions about the Variance](#answer-to-2-common-questions-about-the-variance)
 - [Standard Deviation](#standard-deviation)
@@ -49,7 +50,12 @@ $$ IQR = Q3 - Q1 $$
 
 Box and whisker plots are a popular visualization technique that uses IQR to represent the spread of the data. The box represents the IQR, and the whiskers extend to the minimum and maximum values in the data set. Outliers are plotted as individual points.
 
-**Outliers** are data points that are significantly different from the other data vlaues. But how do we know which one is an outlier? A rule that's often used is that, $data\ points < Q1 - (1.5 * IQR)$ and the $data\ points > Q3 + (1.5 * IQR)$ are considered outliers.
+### Outliers
+**Outliers** are data points that are significantly different from the other data vlaues. 
+
+But how do we know which one is an outlier? 
+
+A rule that's often used is that, $data\ points < Q1 - (1.5 * IQR)$ and the $data\ points > Q3 + (1.5 * IQR)$ are considered outliers.
 
 
 # Variance
@@ -64,14 +70,18 @@ $$ Sample\ Variance,\ s^2 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1} $$
 where, $\bar{x}$ is the sample mean and $n$ is the number of data points.
 
 ### Answer to 2 common questions about the Variance
-1. Why do we square the distance of the data points from the mean? Since the mean is by definition sits at the middle of the dataset, if we were to just simply find out the average deviation (of the data points from the mean) then the deviations of the data points above the mean would have canceled out the deviations below the mean. Thus, if we don't square the individual deviations, the sum of the deviations will always be zero. Squaring the deviations ensures that the sum of the deviations is always positive. Now we might say why not take the absolute value of the deviations instead of squaring them? Short and simple answer is Math (Enter Math Jargon: the reason is that the absolute value function is not differentiable at zero, which makes it difficult to work with mathematically. The squared function, on the other hand, is differentiable everywhere). 
+1. Why do we square the distance of the data points from the mean? 
 
-    **`Note:`** We actually use the absolute deviation to form another measure of spread called the **Mean Absolute Deviation (MAD)**.
-    $$ MAD = \frac{\sum_{i=1}^{N} |x_i - \mu|}{N}$$
+Since the mean by definition sits at the middle of the dataset, if we were to just simply find out the average deviation (of the data points from the mean) then the deviations of the data points above the mean would have canceled out the deviations below the mean. Thus, if we don't square the individual deviations, the sum of the deviations will always be zero. Squaring the deviations ensures that the sum of the deviations is always positive. Now we might say why not take the absolute value of the deviations instead of squaring them? Short and simple answer is Math (Enter Math Jargon: the reason is that the absolute value function is not differentiable at zero, which makes it difficult to work with mathematically. The squared function, on the other hand, is differentiable everywhere). 
 
-    Since we squared all the deviations, the variance penalizes the larger deviations more severly whereas, MAD treats all deviations equally. Thus, variance is more sensitive to outliers than MAD. Also, the variance is in squared units of the original data whereas MAD is in the same units as the original data. Thus, MAD is more interpretable than variance. Even then Standard Deviation is more commonly used than MAD.
+**`Note:`** We actually use the absolute deviation to form another measure of spread called the **Mean Absolute Deviation (MAD)**.
+$$ MAD = \frac{\sum_{i=1}^{N} |x_i - \mu|}{N}$$
 
-2. Why do we divide the sum of squared deviations by $N$ in the population variance formula and by $n-1$ in the sample variance formula? This is done to correct for the bias in the estimation of the population variance from the sample variance. The sample variance is a biased estimator of the population variance because it tends to underestimate the population variance (since we can't exactly know the population mean thus we use sample mean to calculate the sample variance). Dividing by $n-1$ instead of $n$ corrects for this bias. This is known as Bessel's correction.
+Since we squared all the deviations, the variance penalizes the larger deviations more severly whereas, MAD treats all deviations equally. Thus, variance is more sensitive to outliers than MAD. Also, the variance is in squared units of the original data whereas MAD is in the same units as the original data. Thus, MAD is more interpretable than variance. Even then Standard Deviation is more commonly used than MAD.
+
+2. Why do we divide the sum of squared deviations by $N$ in the population variance formula and by $n-1$ in the sample variance formula? 
+ 
+This is done to correct for the bias in the estimation of the population variance from the sample variance. The sample variance is a biased estimator of the population variance because it tends to underestimate the population variance (since we can't exactly know the population mean thus we use sample mean to calculate the sample variance). Dividing by $n-1$ instead of $n$ corrects for this bias. This is known as Bessel's correction.
 
 
 # Standard Deviation

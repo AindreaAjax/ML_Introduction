@@ -1,3 +1,11 @@
+- [Sampling](#sampling)
+  - [Types of sampling on the basis of how the sample is selected](#types-of-sampling-on-the-basis-of-how-the-sample-is-selected)
+    - [Probability sampling](#probability-sampling)
+    - [Non-probability sampling](#non-probability-sampling)
+  - [Types of sampling on the basis of the nature of the population being sampled](#types-of-sampling-on-the-basis-of-the-nature-of-the-population-being-sampled)
+    - [Sampling from an infinite population](#sampling-from-an-infinite-population)
+    - [Sampling from a finite population](#sampling-from-a-finite-population)
+    - [Sampling from the whole population](#sampling-from-the-whole-population)
 
 # Sampling
 Sampling is the process of selecting a subset of a population to study the characteristics of the whole population.

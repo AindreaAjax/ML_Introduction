@@ -189,7 +189,7 @@ The Normal Distribution, also known as the Gaussian distribution or the bell cur
 
 1. The observations in the distribution must be independent.
 2. The observations in the distribution must be random i.e, they are not the result of any known pattern or process.
-3. The distribution must be based on a large sample size. This is because the normal distribution is a limiting distribution, meaning that it is the distribution that all other distributions (both discrete and continuous random distributions) approach (when a sampling distribution is taken) as the sample size increases. This is also known as the **central limit theorem**. The central limit theorem applies to summary statistics such as, count, mean, median, standard deviation, proportion etc.
+3. The distribution must be based on a large sample size. This is because the normal distribution is a limiting distribution, meaning that it is the distribution that all other distributions approach (both discrete and continuous random distributions, when a sampling distribution is taken) as the sample size increases. This is also known as the **central limit theorem**. The central limit theorem applies to summary statistics such as, count, mean, median, standard deviation, proportion etc.
 
 `Formula:`
 
@@ -213,10 +213,10 @@ Where $Φ(x)$ is the *standard normal cumulative distribution function*.
 
 Here are some examples of distributions that are often assumed to be normal:
 
-- The height of people.
-- The IQ scores of students.
-- The errors in measurements.
-- The distribution of returns on investments.
+- Heights of people.
+- IQ scores of students.
+- Errors in measurements.
+- The distribution of return on investments.
 
 `Standard normal distribution:`
 

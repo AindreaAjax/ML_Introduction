@@ -2,7 +2,7 @@
   - [Discrete random variables](#discrete-random-variables)
   - [Continuous random variables](#continuous-random-variables)
 - [Probability distribution function (PDFs)](#probability-distribution-function-pdfs)
-  - [Cuminative distribution function (CDF)](#cuminative-distribution-function-cdf)
+  - [Cumulative distribution function (CDF)](#cumulative-distribution-function-cdf)
 - [Probability mass function (PMF)](#probability-mass-function-pmf)
   - [Cumulative distribution function (CDF) for discrete random variables](#cumulative-distribution-function-cdf-for-discrete-random-variables)
 - [Probability density function (PDF)](#probability-density-function-pdf)
@@ -37,7 +37,7 @@ PDFs can be used for both discrete and continuous random variables. For discrete
 The notation for PDFs varies depending on whether it's for a discrete or continuous random variable. For discrete, it's often denoted as $P(X=x)$, and for continuous, it's denoted as $f(x)$.
 
 
-## Cuminative distribution function (CDF)
+## Cumulative distribution function (CDF)
 
 **The cumulative distribution function (CDF) provides the cumulative probability that a random variable X takes on a value less than or equal to a specific value x.**
 
@@ -90,7 +90,7 @@ The Probability density function (PDF), denoted as f(x), describes how the proba
 
 Due to the nature of continuous random variables, the probability that a continuous random variable will take on a particular value is zero. This is because there are an infinite number of possible values, and the probability of any one value occurring is infinitesimally small. This is why PDF is defined as the probability density rather than the probability itself.
 
-**Note:** Probability density function (PDF) should not be confused with probability distribution function (PDFs).  "Probability Distribution Functions" is a broader term that encompasses the concept of probability distributions for both discrete and continuous random variables, while "Probability Density Function" is a specific term used only for continuous random variables to describe the probability distribution in terms of densities over intervals.
+**Note:** Probability density function (PDF) should not be confused with probability distribution functions (PDFs).  "Probability Distribution Functions" is a broader term that encompasses the concept of probability distributions for both discrete and continuous random variables, while "Probability Density Function" is a specific term used only for continuous random variables to describe the probability distribution in terms of densities over intervals.
 
 Example: If X represents the height of individuals in a population, the PDF tells you how likely it is for an individual's height to be within a specific range (e.g., between 5 feet and 6 feet).
 
@@ -114,7 +114,7 @@ The CDF of a continuous random variable tells us how much of the distribution is
 
 Example: Using the same height example, the CDF tells you what is the probability that an individual's height is less than or equal to 6 feet.
 
-The CDF of a continuous random variable can be calculated by integrating the probability density function (PDF) of X from 0 to x.
+The CDF of a continuous random variable can be calculated by integrating the probability density function (PDF) of X from -inf to x.
 
 $$F(x) = \int_{-\infty}^{x} f(x) \, dx $$
 

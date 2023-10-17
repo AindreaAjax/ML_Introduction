@@ -46,7 +46,7 @@ So what does it mean for two events to be independent of each other? Two events 
 
 There will always be some intersection between two independent events. And for independent events $A$ and $B$, $$P(A\ |\ B) = P(A)$$
 
-Two events are dependent if knowing that one occurs changes the probability that the other one occurs. For example, getting a 6 on the first roll completely eliminates the possibility of getting a 3 on that roll.
+Two events are dependent if knowing that one occurs changes the probability that the other one occurs. For example, getting a 6 on the first roll completely eliminates the possibility of getting a 3 on that same roll.
 
 Mutually exclusive events are the most extreme example of dependent events.
 
@@ -97,5 +97,5 @@ The spam filter classifies e-mail as spam via a Bayesian analysis:
 2. After examining the e-mail for certain keywords such as ‘money’, the filter updates this prior probability using Bayes’ rule to arrive at the posterior probability that the
 e-mail is spam.
 
-This is an example of how the Bayes' rule is used in the real life.
+This is an example of how the Bayes' rule is used in real life.
 

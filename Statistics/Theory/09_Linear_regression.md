@@ -68,7 +68,7 @@ Where:
 - $y_i$ is the $i^{th}$ observation of $y$
 - $\hat{y_i}$ is the predicted/estimated value of $y_i$ for the $i^{th}$ observation (lies on the line of best fit)
 
-![Example Screenshot from zedstatistics](imgs/SST_SSE_SSR_zedstatistics.png)
+![Example Screenshot from zedstatistics](../imgs/SST_SSE_SSR_zedstatistics.png)
 
 ### R-squared
 The **coefficient of determination** or **R-squared** is the proportion of the variation in $y$ explained by the regression line (i.e, the variation in the independent variables $X$). It is given by,
