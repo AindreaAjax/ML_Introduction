@@ -206,13 +206,17 @@ The bootstrap distribution can be used to estimate a variety of things, such as:
 
 A confidence interval is a range of values that we are confident contains the true population parameter. It is calculated using a sample statistic and a margin of error.
 
-The confidence interval for a sampling/bootstrap distribution is given by,
+The confidence interval for a sampling distribution is given by,
 $$ CI = \bar x \pm z \times SE(\bar x)$$
+
+The confidence interval for a bootstrap distribution is given by,
+$$ CI = \bar x \pm t \times SE(\bar x)$$
 
 Where, 
 
 - $\bar x$ is the sampling/bootstrap distribution mean (our best estimate of population statistic)
 - $z$ is the z-score and depends on the confidence level
+- $t$ is the t-score and depends on the confidence level and the degrees of freedom
 - $SE(\bar x)$ is the standard error of the sampling/bootstrap distribution
 
 The standard error $SE(\bar x)$ is given as, $SE(\bar x) = \frac{s}{\sqrt{n}}$ where $s$ is the standard deviation of the sampling/bootstrap distribution and $n$ is the sample size.
