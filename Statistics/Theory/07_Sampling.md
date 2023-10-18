@@ -10,6 +10,8 @@
     - [How to create a sampling distribution?](#how-to-create-a-sampling-distribution)
     - [Properties of sampling distributions](#properties-of-sampling-distributions)
     - [Exact and approximate sampling distributions](#exact-and-approximate-sampling-distributions)
+- [Bootsrapping](#bootsrapping)
+- [Confidence interval](#confidence-interval)
 
 # Sampling
 Sampling is the process of selecting a subset of a population to study the characteristics of the whole population.
@@ -152,7 +154,8 @@ However, the central limit theorem tells us that the sampling distribution of th
 In other words, the first statement is a general rule, while the second statement is a specific exception to that rule. The central limit theorem is a powerful tool that allows us to make inferences about populations based on samples, even when the population distribution is not normally distributed.
 
 3. The mean of a sampling distribution is our best estimate to the parameter of the population that the statistic is estimating.
-4. The standard deviation of a sampling distribution is called the standard error of the statistic. The standard error decreases as the sample size increases.
+4. The standard deviation of a sampling distribution is called the standard error of the statistic. The standard error decreases as the sample size increases. The standard error is a measure of the uncertainty in the estimate of the parameter of the population that the statistic is estimating. It is related to the standard deviation of the population distribution and the sample size by the following formula:
+  $$Population\ Standard\ Deviation = \frac{Standard\ Error}{\sqrt{Sample\ Size}}$$ (Best estimate)
 
 ### Exact and approximate sampling distributions
 An exact sampling distribution is a probability distribution of a statistic obtained from all possible samples of a fixed size drawn from a population. An approximate sampling distribution is a probability distribution of a statistic obtained from a sample of a fixed size drawn from a population. 
@@ -167,3 +170,49 @@ What enables us to use approximate sampling distribution instead of an exact sam
 
 Approximate sampling distributions are often used to make inferences about population parameters because they are easier to calculate than exact sampling distributions. However, it is important to note that approximate sampling distributions are only approximations, and the accuracy of the approximation depends on the sample size and the shape of the population distribution.
 
+
+# Bootsrapping
+
+Bootstrapping is a statistical method that can be used to estimate the sampling distribution of almost any statistic. It is a non-parametric method, which means that it does not make any assumptions about the shape of the population distribution.
+
+`One line summary:` sampling with replacement.
+
+**To create a bootstrap distribution, we follow these steps:**
+
+1. Take a random sample from the population.
+2. Create a bootstrap sample by resampling with replacement from the original sample.
+3. Calculate the statistic of interest for the bootstrap sample.
+4. Repeat steps 2 and 3 a large number of times (e.g., 1000 times).
+5. The **bootstrap distribution** is the distribution of the statistic of interest across all of the bootstrap samples.
+
+Bootstrapping is also known as resampling. For bootstrapping each row in the dataset should have an equal probability of being selected. 
+
+Bootstrapping is, in some sense, the opposite of sampling from a population. Sampling treats your dataset as the population, and you generate a random subset. Bootstrapping treats your dataset as a sample and uses it to build up a theoretical population. 
+
+The key to deciding whether to sample with replacement (bootstrapping) or without replacement (simple sampling) is whether or not your dataset is best thought of as being the whole population or not.
+
+The bootstrap distribution can be used to estimate a variety of things, such as: The standard error of a statistic, Confidence intervals for a statistic, P-values for hypothesis tests, Power curves for statistical tests etc.
+
+**Bootstrapping differs from the traditional approach to sampling distributions in the following ways:**
+
+- Bootstrapping does not require us to know the population distribution.
+- Bootstrapping can be used to estimate the sampling distribution of almost any statistic, including complex statistics such as the median or the correlation coefficient.
+
+
+**Caution:** If the sample is not closely representative of the population, then the mean of the bootstrap distribution will not be representative of the population mean. This is less of a problem for standard errors.
+
+
+# Confidence interval
+
+A confidence interval is a range of values that we are confident contains the true population parameter. It is calculated using a sample statistic and a margin of error.
+
+The confidence interval for a sampling/bootstrap distribution is given by,
+$$ CI = \bar x \pm z \times SE(\bar x)$$
+
+Where, 
+
+- $\bar x$ is the sampling/bootstrap distribution mean (our best estimate of population statistic)
+- $z$ is the z-score and depends on the confidence level
+- $SE(\bar x)$ is the standard error of the sampling/bootstrap distribution
+
+The standard error $SE(\bar x)$ is given as, $SE(\bar x) = \frac{s}{\sqrt{n}}$ where $s$ is the standard deviation of the sampling/bootstrap distribution and $n$ is the sample size.
