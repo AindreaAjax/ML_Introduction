@@ -6,6 +6,10 @@
     - [Sampling from an infinite population](#sampling-from-an-infinite-population)
     - [Sampling from a finite population](#sampling-from-a-finite-population)
     - [Sampling from the whole population](#sampling-from-the-whole-population)
+- [Sampling distribution](#sampling-distribution)
+    - [How to create a sampling distribution?](#how-to-create-a-sampling-distribution)
+    - [Properties of sampling distributions](#properties-of-sampling-distributions)
+    - [Exact and approximate sampling distributions](#exact-and-approximate-sampling-distributions)
 
 # Sampling
 Sampling is the process of selecting a subset of a population to study the characteristics of the whole population.
@@ -114,3 +118,52 @@ And the standard error of the population mean,
 $$SE(\mu) = 0$$
 
 This is because the population mean is the true mean of the population and there is no uncertainty in the estimate.
+
+
+# Sampling distribution
+
+**The distribution of a sample statistic is called a sampling distribution.**
+
+A sampling distribution is a probability distribution of a statistic obtained from a larger number of samples drawn from a specific population. It describes a range of possible outcomes for a statistic, such as the mean or mode of some variable, of a population.
+
+### How to create a sampling distribution?
+To create a sampling distribution, we would need to repeatedly draw random samples from a population and calculate a statistic for each sample. The sampling distribution would then be the distribution of the values of the statistic across all of the samples.
+
+Sampling distributions are important because they allow us to make inferences about populations based on samples. For example, we can use the sampling distribution of the mean to estimate the population mean with a certain degree of confidence.
+
+Here is an example of a sampling distribution:
+
+Suppose we have a population of 1000 students with a mean height of 67 inches. We draw 100 random samples of 10 students each and calculate the mean height of each sample. The sampling distribution of the mean would then be the distribution of the 100 sample means.
+
+Sampling distributions are used in a variety of statistical methods, including hypothesis testing, confidence intervals, and regression analysis.
+
+### Properties of sampling distributions
+Here are some of the key properties of sampling distributions:
+
+1. The shape of a sampling distribution depends on the shape of the population distribution, the statistic being considered, and the sample size.
+2. The central limit theorem states that the sampling distribution of the mean will be approximately normally distributed, regardless of the shape of the population distribution, as long as the sample size is sufficiently large.
+
+These two statements may seem contradictory at first glance, but they are actually complementary. The first statement is a general statement about the shape of sampling distributions, while the second statement is a specific statement about the sampling distribution of the mean.
+
+The first statement is true for all sampling distributions, regardless of the statistic being considered. The shape of a sampling distribution will always depend on the shape of the population distribution and the sample size.
+
+However, the central limit theorem tells us that the sampling distribution of the mean will be approximately normally distributed, regardless of the shape of the population distribution, as long as the sample size is sufficiently large. This is because the central limit theorem is a specific statement about the sampling distribution of the mean, and it takes into account the fact that the sample size is sufficiently large.
+
+In other words, the first statement is a general rule, while the second statement is a specific exception to that rule. The central limit theorem is a powerful tool that allows us to make inferences about populations based on samples, even when the population distribution is not normally distributed.
+
+3. The mean of a sampling distribution is our best estimate to the parameter of the population that the statistic is estimating.
+4. The standard deviation of a sampling distribution is called the standard error of the statistic. The standard error decreases as the sample size increases.
+
+### Exact and approximate sampling distributions
+An exact sampling distribution is a probability distribution of a statistic obtained from all possible samples of a fixed size drawn from a population. An approximate sampling distribution is a probability distribution of a statistic obtained from a sample of a fixed size drawn from a population. 
+
+The original concept of sampling distributions refers to the exact sampling distribution.
+
+To calculate the exact sampling distribution of a statistic, we would need to calculate the statistic for all possible samples of a fixed size drawn from the population. However, in practice, it is often difficult or impossible to compute the exact sampling distribution, especially for large populations. Therefore, we often use approximate sampling distributions to make inferences about populations based on samples.
+
+To calculate an approximate sampling distribution of a statistic, we would take a sample from the population and then calculate the statistic for a large number of subsamples of the original sample. The distribution of the statistic for the subsamples would be the approximate sampling distribution of the statistic.
+
+What enables us to use approximate sampling distribution instead of an exact sampling distribution is the central limit theorem. The central limit theorem states that the sampling distribution of the mean will be approximately normally distributed, regardless of the shape of the population distribution, as long as the sample size is sufficiently large. This means that we can use the normal distribution to calculate confidence intervals for the mean, even if the population distribution is not normally distributed.
+
+Approximate sampling distributions are often used to make inferences about population parameters because they are easier to calculate than exact sampling distributions. However, it is important to note that approximate sampling distributions are only approximations, and the accuracy of the approximation depends on the sample size and the shape of the population distribution.
+
