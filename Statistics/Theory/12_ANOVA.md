@@ -106,9 +106,7 @@ If the ANOVA test yields a statistically significant result so that $H_0$ is rej
 
 All the groups are paired with each other in a combinatory fashion and t-tests are performed on each pair of groups adjusting the significance level.
 
-For ANOVA test usually a large significance level such as $\alpha=0.2$ is used. This is because as the number of groups increases the probability of making a Type II error (failure to reject $H_0$ when it is false) increases due to randomness.
-
-If there are k groups, then there will be $\frac{k(k-1)}{2}$ pairwise comparisons. As the number of groups increases, the number of pairwise comparisons increases exponentially. As a result using the original significance level will increase the probability of making a Type I error (rejecting $H_0$ when it is true). This is why adjusting the significance level is necessary as the post-hoc t-tests are conducted.
+If there are k groups, then there will be $\frac{k(k-1)}{2}$ pairwise comparisons. As the number of groups increases, the number of pairwise comparisons increases quadratically. As a result using the original significance level will increase the probability of making a Type I error (rejecting $H_0$ when it is true). For example, With a significance level of point-two, if we run one test, the chance of a false positive result is point-two. With five groups and ten tests, the probability of at least one false positive is around point-seven. With twenty groups, it's almost guaranteed that we'll get at least one false positive. This is why adjusting the significance level is necessary as the post-hoc t-tests are conducted.
 
 A popular method for adjusting the significance level is the Bonferroni correction. The Bonferroni correction is given as, $$\alpha^* = \frac{\alpha}{\frac{k(k-1)}{2}}$$
 
