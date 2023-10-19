@@ -33,7 +33,20 @@ The **two-tailed test** is used when we are interested in both directions of the
 
 For a two-tailed test, the significance level is split into two equal parts. For example, if the significance level is 5%, then the significance level for each tail is 2.5%. 
 
-## Hypothesis testing for nearly normal point estimates of a *single variable*
+## Choosing the correct statistical test
+It is important to choose the correct statistical test for your data and your research question. Using the wrong statistical test can lead to inaccurate results.
+
+Here are some examples of statistical tests that can be used to compare different the mean:
+    
+    Mean: t-test, ANOVA, z-test, Welch's t-test
+    Proportion: Chi-squared test, z-test, Fisher's exact test
+    Standard deviation: F-test, Levene's test, Bartlett's test, z-test
+    Median: Wilcoxon rank-sum test, Mann-Whitney U test, z-test
+    Mode: Chi-squared test
+    Variance: F-test, Bartlett's test, Levene's test
+    
+
+## Hypothesis testing for nearly normal point estimates of a *single variable*, **z-test**
 
 The main question we ask in hypothesis testing is that, if the Null Hypothesis $H_0$ is true, how extreme is the sample data? If the sample data is not extreme enough, then we accept the Null Hypothesis. If the sample data is extreme, then we reject the Null Hypothesis.
 
@@ -47,28 +60,18 @@ where $\bar{x}$ is the sample mean, $\mu_0$ is the Null Hypothesis value of the 
 
 The corresponding significance level for a z-score can be found from the z-table. The z-table gives the area under the standard normal curve to the left of a given z-score. 
 
-- **t-score:** The t-score is used when we don't know the population standard deviation $\sigma$ (Which  is almost always). The t-score is given as,
-
-$$ t = \frac{\text{Point estimate} - \text{Null Hypothesis value}}{\text{Standard error of the point estimate}} $$
-
-For example if we were testing for mean of a population, then the t-score is given as,
-
-$$ t = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}} $$
-
-Where $s$ is the sample standard deviation.
-
-The t-distribution is fairly similar to the z-distribution, but has heavier tails. The t-distribution is parameterized by the degrees of freedom, which is the number of observations in the sample minus one i.e, $df = n - 1$. As the degrees of freedom increases, the t-distribution approaches the z-distribution.
-
-Using the calculated degrees of freedom, we can find the t-score from the t-table. The t-table gives the area under the t-distribution curve to the left of a given t-score.
-
 - **p-value:** A similar and complementary measure of z-score/t-score is the **p-value**. The p-value is the probability of getting a sample as extreme as ours, given the Null Hypothesis is true.
 
-We reject the Null Hypothesis if the p-value is less than the significance level or if the z-score/t-score is greater than the z-score/t-score corresponding to the significance level.
+We reject the Null Hypothesis if the p-value is less than the significance level or if the z-score is greater than the z-score corresponding to the significance level.
 
 
-## Hypothesis testing for comparing sample statistics across *two groups* of a variable
+## Hypothesis testing for comparing the mean across *two groups* of a variable, **t-test**
 
-For comparing sample statistics across two groups of a variable, we use the **two-sample t-test**. The two-sample t-test is used to test whether the means of two populations are equal. 
+
+### Independent t-test
+In an independent t-test, we are comparing the means of two independent groups of a variable. Here the term independent means that the two groups are not directly related to each other i.e, there are no inherent relationships between the two groups.
+
+For comparing the mean across two independent groups of a variable, we use the **two-sample t-test**. 
 
 The Null Hypothesis $H_0$ is that the means of the two populations are equal i.e, $H_0: \mu_1 = \mu_2$.
 
@@ -76,9 +79,7 @@ The Alternative Hypothesis $H_A$ is that the means of the two populations are no
 
 For comparing two different populations i.e, across two groups of a variable, we use the difference of the estimators to test the Null Hypothesis. 
 
-$$ t = \frac{\text{Difference in sample statistics} - \text{Difference in population parameters}}{\text{Standard error of the difference in sample statistics}} $$
-
-For example, if we were testing the difference in means of two groups of a variable, then the t-score is given as,
+The t-score is given as,
 
 $$ t = \frac{(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}} $$
 
@@ -100,10 +101,9 @@ $$ CI = (\bar{x}_1 - \bar{x}_2) \pm t^* \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n
 Where $t^*$ is the t-score corresponding to the desired confidence level. The t-distribution depends on the degrees of freedom. The degrees of freedom is given as, $df = min(n_1 - 1, n_2 - 1)$. Using the calculated degrees of freedom, we can find the t-score from the t-table.
 
 ### Paired t-test
+A paired t-test is a statistical test used *to compare the means* of **two related groups**. 
 
-A paired t-test is a statistical test used to compare the means of **two related groups**. 
-
-It is a type of paired-samples t-test, which means that each subject or entity is measured twice, resulting in pairs of observations. 
+It is a type of paired-samples t-test, which means that each subject or entity is usually measured twice, resulting in pairs of observations. The two groups are usually related inherently or by design.
 
 Paired t-tests are often used in before-and-after studies or in studies where two different treatments are applied to the same group of subjects.
 
@@ -111,11 +111,13 @@ The Null Hypothesis $H_0$ is that the means of the two related groups are equal 
 
 The Alternative Hypothesis $H_A$ is that the means of the two related groups are not equal i.e, $H_A: \mu_1 \neq \mu_2$.
 
-For comparing two related groups, we use the difference of the estimators to test the Null Hypothesis.
+For comparing two related groups, we use the difference of the observations to calculate the sample statistic and then use this statistic to test the Null Hypothesis.
 
-$$ t = \frac{\text{Sample statistics calculated based on the difference between the paired groups} - \text{Population parameter calculated based on the difference between the paired groups}}{\text{Standard error of the sample statistics calculated based on the difference between the paired groups}} $$
+The t-score is given as,
 
-For example, if we were testing the difference in means of two related groups, then the t-score is given as (assuming the Null Hypothesis is true we remove the population parameters),
+$$ t = \frac{\bar{x}_d - \bar{\mu}_d}{\frac{s_d}{\sqrt{n}}} $$
+
+Assuming the Null Hypothesis is true the above equation can be reduced to,
 
 $$ t = \frac{\bar{x}_d}{\frac{s_d}{\sqrt{n}}} $$
 
