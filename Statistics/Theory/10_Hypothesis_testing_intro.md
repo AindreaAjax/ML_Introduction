@@ -55,9 +55,11 @@ For example if we were testing for mean of a population, then the t-score is giv
 
 $$ t = \frac{\bar{x} - \mu_0}{\frac{s}{\sqrt{n}}} $$
 
-where $s$ is the sample standard deviation.
+Where $s$ is the sample standard deviation.
 
-In this case we use the t-table to find the significance level corresponding to the t-score. The t-table gives the area under the t-distribution curve to the left of a given t-score. This is very similar to the z-table.
+The t-distribution is fairly similar to the z-distribution, but has heavier tails. The t-distribution is parameterized by the degrees of freedom, which is the number of observations in the sample minus one i.e, $df = n - 1$. As the degrees of freedom increases, the t-distribution approaches the z-distribution.
+
+Using the calculated degrees of freedom, we can find the t-score from the t-table. The t-table gives the area under the t-distribution curve to the left of a given t-score.
 
 - **p-value:** A similar and complementary measure of z-score/t-score is the **p-value**. The p-value is the probability of getting a sample as extreme as ours, given the Null Hypothesis is true.
 
@@ -95,5 +97,35 @@ The confidence interval for the difference in means of two groups of a variable 
 
 $$ CI = (\bar{x}_1 - \bar{x}_2) \pm t^* \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}} $$
 
-Where $t^*$ is the t-score corresponding to the desired confidence level. The t-score depends on the degrees of freedom. The degrees of freedom is given as, $df = min(n_1 - 1, n_2 - 1)$. Using the calculated degrees of freedom, we can find the t-score from the t-table.
+Where $t^*$ is the t-score corresponding to the desired confidence level. The t-distribution depends on the degrees of freedom. The degrees of freedom is given as, $df = min(n_1 - 1, n_2 - 1)$. Using the calculated degrees of freedom, we can find the t-score from the t-table.
+
+### Paired t-test
+
+A paired t-test is a statistical test used to compare the means of **two related groups**. 
+
+It is a type of paired-samples t-test, which means that each subject or entity is measured twice, resulting in pairs of observations. 
+
+Paired t-tests are often used in before-and-after studies or in studies where two different treatments are applied to the same group of subjects.
+
+The Null Hypothesis $H_0$ is that the means of the two related groups are equal i.e, $H_0: \mu_1 = \mu_2$.
+
+The Alternative Hypothesis $H_A$ is that the means of the two related groups are not equal i.e, $H_A: \mu_1 \neq \mu_2$.
+
+For comparing two related groups, we use the difference of the estimators to test the Null Hypothesis.
+
+$$ t = \frac{\text{Sample statistics calculated based on the difference between the paired groups} - \text{Population parameter calculated based on the difference between the paired groups}}{\text{Standard error of the sample statistics calculated based on the difference between the paired groups}} $$
+
+For example, if we were testing the difference in means of two related groups, then the t-score is given as (assuming the Null Hypothesis is true we remove the population parameters),
+
+$$ t = \frac{\bar{x}_d}{\frac{s_d}{\sqrt{n}}} $$
+
+Where:
+- $\bar{x}_d = \overline{(x_1 - x_2)}$
+- $s_d$ is the sample standard deviation of the difference between the two related groups and $n$ is the sample size of the two related groups.
+
+#### **Some examples of paired t-tests are,**
+
+- To test the effectiveness of a new elementary school study technique, *pre and post-tests* are given *to the same random sample of students*.
+- Scientists wish to understand whether older children like sugar less than younger children, sibiling pairs were surveyed on their sugar preferences.
+- A researcher wants to test the hypothesis that a new drug is more effective than a standard treatment for a certain disease. The researcher randomly assigns patients to either the new drug or the standard treatment. After a certain period of time, the researcher measures the improvement in each patient's condition. The researcher uses a paired t-test to compare the improvement scores of the two groups.The researcher used a paired t-test instead of other tests because the data was collected from the same group of subjects before and after receiving the new drug.
 
