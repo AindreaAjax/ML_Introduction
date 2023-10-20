@@ -2,6 +2,7 @@
   - [One-tailed and two-tailed tests](#one-tailed-and-two-tailed-tests)
   - [Choosing the correct statistical test](#choosing-the-correct-statistical-test)
   - [Hypothesis testing for nearly normal point estimates of a *single variable*, **z-test**](#hypothesis-testing-for-nearly-normal-point-estimates-of-a-single-variable-z-test)
+    - [Conditions for z-test](#conditions-for-z-test)
 
 
 # Hypothesis testing
@@ -44,10 +45,10 @@ Here are some examples of statistical tests that can be used to compare differen
     
     Mean: t-test, ANOVA, z-test, Welch's t-test
     Proportion: Chi-squared test, z-test, Fisher's exact test
-    Standard deviation: F-test, Levene's test, Bartlett's test, z-test
-    Median: Wilcoxon rank-sum test, Mann-Whitney U test, z-test
+    Standard deviation: F-test, Levene's test, Bartlett's test
+    Median: Wilcoxon rank-sum test, Mann-Whitney U test
     Mode: Chi-squared test
-    Variance: F-test, Bartlett's test, Levene's test
+    Variance: F-test, Bartlett's test, Levene's test, z-test
     
 
 ## Hypothesis testing for nearly normal point estimates of a *single variable*, **z-test**
@@ -67,3 +68,18 @@ The corresponding significance level for a z-score can be found from the z-table
 - **p-value:** A similar and complementary measure of z-score is the **p-value**. The p-value is the probability of getting a sample as extreme as ours, given the Null Hypothesis is true.
 
 We reject the Null Hypothesis if the p-value is less than the significance level or if the z-score is greater than the z-score corresponding to the significance level.
+
+
+### Conditions for z-test
+
+**The z-test** can be used to test the null hypothesis that a population parameter is equal to a certain value, *for any population parameter that is normally distributed*. This includes parameters such as the *population mean, the population variance, and the population proportion*.
+
+The *z-score* is calculated as,
+
+$$ z = \frac{\text{Sample statistic} - \text{Null Hypothesis value}}{\text{Standard error of the sample statistic i.e, population standard deviation of the sample statistic}} $$ 
+
+It should be noted that we often don't know the population standard deviation. As a result direct calculation of the standard error i.e, the population standard deviation (of the sample statistic) is not possible. 
+
+In such cases we usually create a **bootstrap distribution** of the sample statistic and use the standard deviation of the bootstrap distribution as the standard error of the sample statistic i.e, the bootstrap distribution is used as an estimate of the population distribution.
+
+But creating a bootstrap distribution is not always possible. As a result we have to use the sample standard deviation as an estimate of the population standard deviation. But this introduces a new order of uncertainty in our calculations (since we use the sample to calculate the sample statistic in the numerator instead of using the population parameter). If this is the case, then we can't use the z-test. Instead we have to use the **t-test**.

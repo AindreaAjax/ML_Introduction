@@ -1,4 +1,5 @@
 - [Hypothesis testing for comparing the mean across *two groups* of a variable, **t-test**](#hypothesis-testing-for-comparing-the-mean-across-two-groups-of-a-variable-t-test)
+  - [Why do we use t-test?](#why-do-we-use-t-test)
   - [Independent t-test](#independent-t-test)
   - [Paired t-test](#paired-t-test)
     - [**Some examples of paired t-tests are,**](#some-examples-of-paired-t-tests-are)
@@ -6,6 +7,28 @@
 
 # Hypothesis testing for comparing the mean across *two groups* of a variable, **t-test**
 
+## Why do we use t-test?
+
+We could've also used the z-test for comparing the mean across two groups of a variable. So why don't we? 
+
+Well we do in some cases and in most cases we can't even if we want to.
+
+**The z-test** can be used to test the null hypothesis that a population parameter is equal to a certain value, *for any population parameter that is normally distributed*. This includes parameters such as the *population mean, the population variance, and the population proportion*.
+
+The *z-score* is calculated as, 
+
+$$ z = \frac{\text{Sample statistic} - \text{Null Hypothesis value}}{\text{Standard error of the sample statistic i.e, population standard deviation of the sample statistic}} $$ 
+
+$$i.e, z = \frac{\text{Sample statistic} - \text{Null Hypothesis value}}{\sigma/\sqrt{n}}$$
+
+But the problem is that we often don't know the population standard deviation. As a result direct calculation of the standard error i.e, the population standard deviation (of the sample statistic) is not possible. 
+
+In such cases if we want to use the *z-test* what we can do is we can create a **bootstrap distribution** of the sample statistic. Then we can use the standard deviation of the bootstrap distribution as the standard error of the sample statistic i.e, the bootstrap distribution is used as an estimate of the population distribution.
+
+But creating a bootstrap distribution is not always possible. As a result we have to use the sample standard deviation as our best estimate of the population standard deviation. But this introduces a new order of uncertainty in our calculations (since we use the sample to calculate the sample statistic in the numerator instead of using the population parameter). If this is the case, then we can't use the z-test. Instead we have to use the **t-test**.
+
+
+**`Note:`** t-tests can only be used to compare the means of two groups of a variable and no other sample statistics.
 
 ## Independent t-test
 In an independent t-test, we are comparing the means of two independent groups of a variable. Here the term independent means that the two groups are not directly related to each other i.e, there are no inherent relationships between the two groups.
