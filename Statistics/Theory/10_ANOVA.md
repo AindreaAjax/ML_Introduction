@@ -99,6 +99,7 @@ The **p-value** is the probability of observing a test statistic as extreme as t
 1. Independence: The observations are independent within and across the groups.
 2. Normality: The response variable is approximately normally distributed within each group.
 3. Equal variance: The variance of the response variable is roughly the same in each group.
+4. Sample size: Each group should have at least 30 observations.
 
 ## Post-hoc tests/Pairwise comparisons for determining which groups have statistically significant differences in their means
 
