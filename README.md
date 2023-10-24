@@ -1,5 +1,3 @@
-### The order of the topics learned
-
 **Note:** Specific resources are listed in the corresponding folders.
 
 -------------------------------------------------------------------------------
@@ -10,11 +8,13 @@
    - Different types of plots with Seaborn
    - Matplotlib Basics 
    - Data Visualization with Pandas
-5. Statistics (upto 09_Linear_regression.md)
-6. EDA
+5. EDA
    - Intro
    - Data communication concepts
    - Data cleaning (***)
+6. Statistics
+   - Theory
+   - Statistics with Python (Sampling and Hypothesis Testing)
+   - Regression Analysis Intro with Statsmodels
 7. SQL
    - Interacting with relational databases in Python
-8. Regression Analysis Intro with statsmodels
