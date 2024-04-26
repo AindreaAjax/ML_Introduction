@@ -18,3 +18,5 @@
    - Regression Analysis Intro with Statsmodels
 7. SQL
    - Interacting with relational databases in Python
+8. Linear Algebra
+   - Khan Academy Course (Link: https://www.khanacademy.org/math/linear-algebra). Hand notes are available on Apple Cloud as apple notes (Link: ).
